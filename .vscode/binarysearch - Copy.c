@@ -1,0 +1,34 @@
+
+#include<stdio.h>
+
+int main()
+{
+    int n;
+    int A[n],l=0,h=n-1,key,mid;
+
+    printf("enter no.:");
+    scanf("%d",&n);
+
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&A[i]);
+    }
+    printf("enter key:");
+    scanf("%d",&key);
+
+    while (l<=h){
+        mid=(l+h)/2;
+        if(key==A[mid]){
+        printf("key found");
+        return 0;
+        }
+        else if(key<A[mid])
+        {
+            h=mid-1;;
+        }
+        else{
+             l=mid+1;
+        }
+    }
+    printf("key not found");
+}
